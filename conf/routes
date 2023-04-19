@@ -10,6 +10,7 @@ POST    /addUser                    controllers.HomeController.addUser()
 GET     /user/:userId               controllers.HomeController.getUser(userId: Int)
 GET     /users                      controllers.HomeController.getAllUsers()
 PUT     /update                     controllers.HomeController.updateUser()
+GET     /countUsers                 controllers.HomeController.countUsers()
 
 
 # Map static resources from the /public folder to the /assets URL path

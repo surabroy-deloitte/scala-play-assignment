@@ -35,4 +35,6 @@ class UserDao @Inject()(protected val dbConfigProvider: DatabaseConfigProvider, 
   def getUser(id: Int): Future[Seq[UserData]] =
     db.run(userTableQuery.filter(_.id === id).result)
 
+  def countTotalUsers(): Future[Int] = db.run(userTableQuery.length.result)
+
 }
